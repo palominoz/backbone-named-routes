@@ -30,8 +30,8 @@
     var numberOfParams = route.match(/\:\w+/g) ? route.match(/\:\w+/g).length : 0;
     PATTERNS[name][numberOfParams] = route;
 
-    // Create the named route helper method for this route name.
-    Backbone.NamedRoutes[name + 'Path'] = function() {
+    // Create the named route helper method for thips route name.
+    Backbone.NamedRoutes[name + '_path'] = function() {
       var args = Array.prototype.slice.call(arguments);
       var hasQueryParams = _(args[args.length-1]).isObject();
       var numberOfParams = hasQueryParams ? arguments.length - 1 : arguments.length;
